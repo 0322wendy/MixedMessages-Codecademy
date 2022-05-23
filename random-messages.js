@@ -32,4 +32,13 @@ function thirdSentence() {
     return 'Your advice for today: ' + randomAdvice; 
 }
 
-console.log(firstSentence() + ' ' + secondSentence() + ' ' + thirdSentence()); 
+let button = document.getElementById('button');
+
+let message = function() {
+    let combinedMessage = firstSentence() + ' ' + secondSentence() + ' ' + thirdSentence();
+    document.getElementById('message').innerHTML = combinedMessage;
+}
+
+// console.log(firstSentence() + ' ' + secondSentence() + ' ' + thirdSentence());
+
+button.addEventListener('click', message);
